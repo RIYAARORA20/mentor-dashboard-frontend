@@ -1,0 +1,150 @@
+body{
+    background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)),url("../Assets/back-to-school-background.jpg");
+    font-family: Bodoni;
+    padding: 20px;
+    background-image: contain;
+}
+h1{
+    justify-content: center;
+    text-align: center;
+    color: #faee92;
+    font-size: 37px;
+}
+.heading{
+    height: 50px;
+}
+.table{
+    border-radius: 15px;
+    background-color: rgba(180, 180, 179, 0.495);
+    padding-bottom: 20px;
+}
+th{
+    height: 50px;
+    width: 500px;
+    font-size: 27px;
+    color: rgb(106, 27, 88);
+}
+td{
+    text-align: center;
+    justify-content: space-between;
+    width: 500px;
+}
+.tick{
+    text-align: left;
+}
+.first{
+    display: flex;
+}
+.second{
+    display: flex;
+    margin-right: 20px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.con{
+  margin-top: 22px;
+}
+.second input{
+    width: 20px;
+    margin-right: 5px;
+}
+.second label{
+    width: auto;
+    margin: auto;
+}
+
+
+.btn-1{
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    justify-content: center;
+}
+.name{
+    font-size: 18px;
+    color: white;
+}
+.button-25 {
+    background-color: #36A9AE;
+    background-image: linear-gradient(#37ADB2, #329CA0);
+    border: 1px solid #2A8387;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-family: -apple-system,".SFNSDisplay-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    line-height: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 11px 15px 12px;
+    text-align: center;
+    transition: box-shadow .05s ease-in-out,opacity .05s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 200px;
+  }
+  
+  .button-25:hover {
+    box-shadow: rgba(255, 255, 255, 0.3) 0 0 2px inset, rgba(0, 0, 0, 0.4) 0 1px 2px;
+    text-decoration: none;
+    transition-duration: .15s, .15s;
+  }
+  
+  .button-25:active {
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
+  }
+  
+  .button-25:disabled {
+    cursor: not-allowed;
+    opacity: .6;
+  }
+  
+  .button-25:disabled:active {
+    pointer-events: none;
+  }
+  
+  .button-25:disabled:hover {
+    box-shadow: none;
+  }
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=number]{
+    background:none;
+    width: 50px;
+    color: white;
+    border-color: white;
+    /* max:"10"; */
+
+}
+
+@media screen and (max-width:695px ){
+  .heading{
+    font-size: 15px;
+    padding-top: -10px;
+    text-wrap: nowrap;
+  }
+    .container{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .second{
+      margin-top: 10px;
+    }
+    .con{
+      margin-top: 20px;
+    }
+}
