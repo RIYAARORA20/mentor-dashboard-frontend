@@ -136,14 +136,21 @@ const Evaluation = () => {
       <br />
       <div className="btn-1">
         <button
-          type="onClick"
+          
           onClick={(e) => {
             e.preventDefault();
             let alerted = false; 
             let alerted1=false;
+            let foundEmpty = false; 
             marks.forEach((item) => {
+              console.log(item); 
+              const hasEmptyFields = !item.Execution || !item.Viva || !item.Idea; 
+              console.log(hasEmptyFields, item.Name); 
+              if (hasEmptyFields) {
+                foundEmpty = true; 
+              }
+
               if(!(item.Execution) ||!(item.Viva) ||!(item.Idea)){
-                // console.log(item.Evaluation)
                 if(!alerted){
                 alert("Please enter the values");
                 alerted =true;
@@ -157,13 +164,19 @@ const Evaluation = () => {
               }
               else {
                 
-                if (!alerted && !alerted1) {
-                  upload();
-                  navigation("/");
-                }
+                // if (!alerted && !alerted1 && !foundEmpty) {
+                  // alert("Will submit"); 
+                  //upload();
+                  //navigation("/");
+                // }
               }
+            });
+
+            if (!alerted && !alerted1 && !foundEmpty) {
+              // alert("Will submit"); 
+              upload();
+              navigation("/");
             }
-            );
           }}
           className="button-25"
         >
