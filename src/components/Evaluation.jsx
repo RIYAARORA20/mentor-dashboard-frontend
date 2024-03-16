@@ -140,24 +140,27 @@ const Evaluation = () => {
           onClick={(e) => {
             e.preventDefault();
             let alerted = false; 
-            
+            let alerted1=false;
             marks.forEach((item) => {
-              if((!item.Evaluation ||!item.Viva ||!item.Rollno)){
+              if(!(item.Execution) ||!(item.Viva) ||!(item.Idea)){
+                // console.log(item.Evaluation)
                 if(!alerted){
                 alert("Please enter the values");
                 alerted =true;
                 }
               }
-              if ((item.Execution > 10) || (item.Viva > 10) || (item.Idea > 10)) {
-                  if (!alerted) {
+              if ((item.Execution > 10) || (item.Viva > 10) ||(item.Idea > 10)) {
+                  if (!alerted1) {
                     alert("Please upload value less than 10");
-                    alerted = true; 
+                    alerted1 = true; 
                   }
               }
               else {
                 
-                if (!alerted) {navigation("/");
-                upload();}
+                if (!alerted && !alerted1) {
+                  upload();
+                  navigation("/");
+                }
               }
             }
             );
